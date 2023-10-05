@@ -1,0 +1,25 @@
+import java.util.*;
+public class Weakest_Soldier {
+    static class Row implements Comparable<Row> {
+        int soldiers;
+        int idx;
+
+        public Row(int soldiers, int idx){
+            this.soldiers = soldiers;
+            this.idx = idx;
+        }
+
+        @Override
+        public int comparesTo(Row r2){
+            if(this.soldiers == r2.soldiers){
+                return this.idx-r2.idx;
+            } else {
+                return this.soldiers-r2.soldiers;
+            }
+        }
+    }
+    public static void main(String args[]){
+        int array[][] = {{1,0,0,0},{1,1,1,1},{1,0,0,0},{1,0,0,0}};
+        int k = 2;
+    }
+}
